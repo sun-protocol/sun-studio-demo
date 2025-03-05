@@ -1,0 +1,15 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomiclabs/hardhat-vyper": "^3.0.8",
+    "@sun-protocol/tron-studio": "0.0.5",
+    "hardhat": "^2.22.19"
+  },
+  "scripts": {
+    "prepare": "node ./.setup.js",
+    "compile": "hardhat compile --verbose --force",
+    "clean": "hardhat clean",
+    "compile-tron": "hardhat compile --network tron --verbose --force"
+  }
+}
