@@ -10,6 +10,10 @@
     "prepare": "node ./.setup.js",
     "compile": "hardhat compile --verbose --force",
     "clean": "hardhat clean",
+    "test": "hardhat test",
     "compile-tron": "hardhat compile --network tron --verbose --force"
+  },
+  "dependencies": {
+    "ethers": "^6.13.5"
   }
 }
