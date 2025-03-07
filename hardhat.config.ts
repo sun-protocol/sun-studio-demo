@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import { HardhatUserConfig } from '@sun-protocol/tron-studio';
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-vyper";
@@ -34,7 +37,7 @@ const config: HardhatUserConfig = {
 			url: "https://nile.trongrid.io/jsonrpc",
       tron: true,
 			deploy: [ 'deployTron/' ],
-      accounts: [ "privateKey" ],
+      accounts: [ `${process.env.PRIVATE_KEY}` ],
     },
   },
 	tronSolc: {

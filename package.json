@@ -7,16 +7,17 @@
     "hardhat": "^2.22.19"
   },
   "scripts": {
-		"start": "hardhat node",
+    "start": "hardhat node",
     "prepare": "node ./.setup.js",
     "compile": "hardhat compile --verbose --force",
     "clean": "hardhat clean",
     "test": "hardhat test",
     "compile-tron": "hardhat compile --network tron --verbose --force",
-		"deploy": "npx hardhat --network localhost deploy",
-		"deploy-tron": "npx hardhat --network tron deploy"
+    "deploy": "npx hardhat --network localhost deploy",
+    "deploy-tron": "npx hardhat --network tron deploy --tags lumi"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "ethers": "^6.13.5"
   }
 }

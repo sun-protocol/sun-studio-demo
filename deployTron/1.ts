@@ -12,6 +12,10 @@ module.exports = async ({
     from: deployer,
     gasLimit: 4000000,
     args: [1893456000],
+    tags: 'lumi',
   });
-	console.log(res);
+  console.log(res)
 };
+
+
+module.exports.tags = ['lumi'];
