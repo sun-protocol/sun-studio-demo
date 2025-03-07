@@ -3,11 +3,18 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-vyper";
 import "@sun-protocol/tron-studio";
 
+const settings = {
+  optimizer: {
+    enabled: true,
+    runs: 999999,
+  },
+};
+
 const config: HardhatUserConfig = {
   solidity: {
 	  compilers:[ 
-	          {"version": "0.8.23"},
-		  {"version": "0.8.22"},
+	    {"version": "0.8.23", settings},
+		  {"version": "0.8.22", settings },
 	  ]
   },
   vyper: {
@@ -17,11 +24,27 @@ const config: HardhatUserConfig = {
 	  ]
   },
   networks: {
+		localhost: {
+      live: false,
+      saveDeployments: true,
+      tags: ["local"],
+			deploy: [ 'deploy/' ],
+    },
     tron: {
-      url: `http://127.0.0.1:9090/jsonrpc`,
+			url: "https://nile.trongrid.io/jsonrpc",
       tron: true,
+			deploy: [ 'deployTron/' ],
+      accounts: [ "privateKey" ],
     },
   },
+	tronSolc: {
+	  enable: true,
+	},
+  namedAccounts: {
+    deployer: {
+        default: 0, // here this will by default take the first account as deployer
+    }
+  }
 };
 
 export default config;

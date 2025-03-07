@@ -7,7 +7,6 @@
 
 from vyper.interfaces import ERC20
 
-
 interface CurveMeta:
     def add_liquidity(amounts: uint256[N_COINS], min_mint_amount: uint256) -> uint256: nonpayable
     def remove_liquidity(_amount: uint256, min_amounts: uint256[N_COINS]) -> uint256[N_COINS]: nonpayable

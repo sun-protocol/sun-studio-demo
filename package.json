@@ -13,7 +13,8 @@
     "clean": "hardhat clean",
     "test": "hardhat test",
     "compile-tron": "hardhat compile --network tron --verbose --force",
-		"deploy": "npx hardhat ignition deploy ./ignition/modules/Lock.ts --network localhost"
+		"deploy": "npx hardhat --network localhost deploy",
+		"deploy-tron": "npx hardhat --network tron deploy"
   },
   "dependencies": {
     "ethers": "^6.13.5"
