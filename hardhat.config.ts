@@ -15,37 +15,37 @@ const settings = {
 
 const config: HardhatUserConfig = {
   solidity: {
-	  compilers:[ 
-	    {"version": "0.8.23", settings},
-		  {"version": "0.8.22", settings },
-	  ]
+    compilers: [
+      { "version": "0.8.23", settings },
+      { "version": "0.8.22", settings },
+    ]
   },
   vyper: {
-	  compilers:[
-		  {"version": "0.2.8"},
-		  {"version": "0.3.10"}
-	  ]
+    compilers: [
+      { "version": "0.2.8" },
+      { "version": "0.3.10" }
+    ]
   },
   networks: {
-		localhost: {
+    localhost: {
       live: false,
       saveDeployments: true,
       tags: ["local"],
-			deploy: [ 'deploy/' ],
+      deploy: ['deploy/'],
     },
     tron: {
-			url: "https://nile.trongrid.io/jsonrpc",
+      url: "https://nile.trongrid.io/jsonrpc",
       tron: true,
-			deploy: [ 'deployTron/' ],
-      accounts: [ `${process.env.PRIVATE_KEY}` ],
+      deploy: ['deployTron/'],
+      accounts: [`${process.env.PRIVATE_KEY}`],
     },
   },
-	tronSolc: {
-	  enable: true,
-	},
+  tronSolc: {
+    enable: true,
+  },
   namedAccounts: {
     deployer: {
-        default: 0, // here this will by default take the first account as deployer
+      default: 0, // here this will by default take the first account as deployer
     }
   }
 };
