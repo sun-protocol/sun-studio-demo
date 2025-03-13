@@ -10,7 +10,7 @@ module.exports = async ({
   // the following will only deploy "GenericMetaTxProcessor" if the contract was never deployed or if the code changed since last deployment
   const res = await deploy('Lock', {
     from: deployer,
-    gasLimit: 4000000,
+    // gasLimit: 200000,
     args: [1893456000],
   });
 	console.log(res);

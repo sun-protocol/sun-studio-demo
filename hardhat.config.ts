@@ -39,6 +39,12 @@ const config: HardhatUserConfig = {
       deploy: ['deployTron/'],
       accounts: [`${process.env.PRIVATE_KEY}`],
     },
+    sepolia: {
+      url: "https://sepolia.drpc.org",
+      tron: false,
+      deploy: ['deploy/'],
+      accounts: [`${process.env.PRIVATE_KEY}`],
+    }
   },
   tronSolc: {
     enable: true,
