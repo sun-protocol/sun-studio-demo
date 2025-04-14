@@ -5,6 +5,7 @@ import { HardhatUserConfig } from '@sun-protocol/tron-studio';
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-vyper";
 import "@sun-protocol/tron-studio";
+import "@nomicfoundation/hardhat-foundry";
 
 const settings = {
   optimizer: {
