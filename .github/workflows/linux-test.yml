@@ -20,6 +20,10 @@ jobs:
         uses: foundry-rs/foundry-toolchain@v1
         with:
           version: stable  # or "nightly"
+      - name: Install Vyper
+        run: |
+            pip install vyper
+
       - name: build 
         run: |
             pnpm install
