@@ -16,6 +16,11 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 10
+      - name: Foundry install
+        run: |
+             curl -L https://foundry.paradigm.xyz | bash
+             source ~/.bashrc
+             foundryup
       - name: build 
         run: |
             pnpm install
@@ -23,11 +28,6 @@ jobs:
       - name: test
         run: |
              pnpm run test
-      - name: Foundry install
-        run: |
-             curl -L https://foundry.paradigm.xyz | bash
-             source ~/.bashrc
-             foundryup
       - name: foundry test
         run: |
              pnpm run init-foundry
