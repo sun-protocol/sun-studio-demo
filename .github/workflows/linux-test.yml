@@ -19,7 +19,7 @@ jobs:
       - name: Foundry install
         run: |
              curl -L https://foundry.paradigm.xyz | bash
-             source ~/.bashrc
+             echo "$HOME/.foundry/bin" >> $GITHUB_PATH
              foundryup
       - name: build 
         run: |
