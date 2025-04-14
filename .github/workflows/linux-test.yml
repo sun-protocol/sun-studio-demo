@@ -17,10 +17,7 @@ jobs:
         with:
           version: 10
       - name: Foundry install
-        run: |
-             curl -L https://foundry.paradigm.xyz | bash
-              echo "$HOME/.foundry/bin" >> $GITHUB_PATH
-              $HOME/.foundry/bin/foundryup
+        uses: foundry-rs/setup-foundry@v1
       - name: build 
         run: |
             pnpm install
