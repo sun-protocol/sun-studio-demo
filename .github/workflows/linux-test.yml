@@ -22,7 +22,7 @@ jobs:
           version: stable  # or "nightly"
       - name: Install Vyper
         run: |
-            pip install vyper==0.3.10
+            pip install vyper==0.2.8
 
       - name: build 
         run: |
