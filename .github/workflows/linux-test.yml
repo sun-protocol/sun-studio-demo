@@ -19,7 +19,7 @@ jobs:
       - name: Foundry install
         uses: foundry-rs/foundry-toolchain@v1
         with:
-          version: stable  # or "nightly"
+          version: nightly  # or "nightly"
       - name: Install Vyper
         run: |
             pip install vyper==0.2.8
