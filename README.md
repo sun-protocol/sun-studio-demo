@@ -98,6 +98,27 @@ or
 npm run compile
 ```
 
+### Unit-Test
+
+#### hardhat test
+
+```
+npx hardhat test
+```
+or
+```
+npm run test
+```
+#### foundry test
+Initial foundry:
+```
+npm run init-foundry
+```
+Run test
+```
+npm run test-foundry
+```
+
 ### Deploy
 
 Rewrite the `deploy/` or `deployTron/` scripts to deploy contracts, and run
