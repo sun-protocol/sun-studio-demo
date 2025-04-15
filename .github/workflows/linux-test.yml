@@ -33,4 +33,5 @@ jobs:
              pnpm run test
       - name: foundry test
         run: |
+             forge --version
              pnpm run test-foundry
