@@ -7,5 +7,7 @@ package-lock.json
 deployments/
 artifacts/
 typechain-types/
-out
-cache_forge
+out/
+cache_forge/
+lib/
+foundry.toml
