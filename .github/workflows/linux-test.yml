@@ -17,9 +17,7 @@ jobs:
         with:
           version: 10
       - name: Foundry install
-        uses: foundry-rs/setup-foundry@v1
-        with:
-          version: nightly  # or "nightly"
+        uses: shazow/setup-foundry@v1
       - name: Install Vyper
         run: |
             pip install vyper==0.2.8
