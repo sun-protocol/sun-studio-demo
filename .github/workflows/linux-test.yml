@@ -33,5 +33,4 @@ jobs:
              pnpm run test
       - name: foundry test
         run: |
-             pnpm run init-foundry
              pnpm run test-foundry
