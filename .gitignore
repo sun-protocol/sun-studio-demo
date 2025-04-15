@@ -8,7 +8,4 @@ deployments/
 artifacts/
 typechain-types/
 out
-lib
-.gitmodules
-foundry.toml
 cache_forge
