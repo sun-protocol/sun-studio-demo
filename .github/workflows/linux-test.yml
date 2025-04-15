@@ -33,5 +33,5 @@ jobs:
              pnpm run test
       - name: foundry test
         run: |
-             pnpm run init-foundry
+             forge install foundry-rs/forge-std
              pnpm run test-foundry

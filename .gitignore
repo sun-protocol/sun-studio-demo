@@ -10,4 +10,3 @@ typechain-types/
 out/
 cache_forge/
 lib/
-foundry.toml
