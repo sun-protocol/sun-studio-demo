@@ -6,7 +6,7 @@ tron-studio-demo
 ```
 node >= v22.14.0
 npm >= 10.9.2
-@sun-protocol/tron-studio >= 0.0.6
+@sun-protocol/tron-studio >= 0.1.0
 
 ```
 ## How To Use TronStudio
