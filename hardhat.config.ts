@@ -4,7 +4,6 @@ dotenv.config();
 import { HardhatUserConfig } from '@sun-protocol/tron-studio';
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-vyper";
-import "@sun-protocol/tron-studio";
 import "@nomicfoundation/hardhat-foundry";
 
 const settings = {
@@ -34,18 +33,18 @@ const config: HardhatUserConfig = {
       tags: ["local"],
       deploy: ['deploy/'],
     },
-    // tron: {
-    //   url: "https://nile.trongrid.io/jsonrpc",
-    //   tron: true,
-    //   deploy: ['deployTron/'],
-    //   accounts: [`${process.env.PRIVATE_KEY}`],
-    // },
-    // sepolia: {
-    //   url: "https://sepolia.drpc.org",
-    //   tron: false,
-    //   deploy: ['deploy/'],
-    //   accounts: [`${process.env.PRIVATE_KEY}`],
-    // }
+    tron: {
+      url: "https://nile.trongrid.io/jsonrpc",
+      tron: true,
+      deploy: ['deployTron/'],
+      accounts: [`${process.env.PRIVATE_KEY}`],
+    },
+    sepolia: {
+      url: "https://sepolia.drpc.org",
+      tron: false,
+      deploy: ['deploy/'],
+      accounts: [`${process.env.PRIVATE_KEY}`],
+    }
   },
   tronSolc: {
     enable: true,
