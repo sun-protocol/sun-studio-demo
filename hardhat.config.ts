@@ -1,10 +1,10 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-import { HardhatUserConfig } from '@sun-protocol/tron-studio';
+import { HardhatUserConfig } from '@sun-protocol/sun-studio';
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-vyper";
-import "@sun-protocol/tron-studio";
+import "@sun-protocol/sun-studio";
 import "@nomicfoundation/hardhat-foundry";
 
 const settings = {

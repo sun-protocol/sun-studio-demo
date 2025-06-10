@@ -1,15 +1,15 @@
-# tron-studio-demo
-tron-studio-demo
+# sun-studio-demo
+sun-studio-demo
 
 ## ENV
 
 ```
 node >= v22.14.0
 npm >= 10.9.2
-@sun-protocol/tron-studio >= 0.2.2
+@sun-protocol/sun-studio >= 0.2.2
 
 ```
-## How To Use TronStudio
+## How To Use SunStudio
 
 ### Installation
 
