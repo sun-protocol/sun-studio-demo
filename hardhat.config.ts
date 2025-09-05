@@ -9,36 +9,38 @@ import "@nomicfoundation/hardhat-foundry";
 
 const settings = {
   optimizer: {
-    enabled: true,
-    runs: 999999,
+    enabled: true,  // enabled for optimizer
+    runs: 999999,   // runs time for optimizer run
   },
 };
 
 const config: HardhatUserConfig = {
   solidity: {
     compilers: [
-      { "version": "0.8.23", settings },
-      { "version": "0.8.22", settings },
+      { "version": "0.8.23", settings }, // current solc version 1
+      { "version": "0.8.22", settings }, // current solc version 2, you should set the same settings for all solc versions required .
     ]
   },
   vyper: {
     compilers: [
-      { "version": "0.2.8" },
-      { "version": "0.3.10" }
+      { "version": "0.2.8" }, // current vyper compilers version 1
+      { "version": "0.3.10" } // current vyper compilers version 2, you should set the same settings for all vyper compiler versions required .
     ]
   },
+  // settings for different networks
   networks: {
     localhost: {
-      live: false,
-      saveDeployments: true,
-      tags: ["local"],
-      deploy: ['deploy/'],
+      live: false, // this network is not a live one
+      saveDeployments: true, // save the deployments in the deployments folder
+      tags: ["local"], // tag for this network
+      deploy: ['deploy/'], // folder for deploy scripts
+      // accounts: [`1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef`],
     },
     // tron: {
-    //   url: "https://nile.trongrid.io/jsonrpc",
-    //   tron: true,
-    //   deploy: ['deployTron/'],
-    //   accounts: [`${process.env.PRIVATE_KEY}`],
+    //   url: "https://nile.trongrid.io/jsonrpc", // tron mainnet rpc url
+    //   tron: true, // enable tron network
+    //   deploy: ['deployTron/'], // folder for tron deploy scripts
+    //   accounts: [`${process.env.PRIVATE_KEY}`], // account private key for deploy
     // },
     // sepolia: {
     //   url: "https://sepolia.drpc.org",
@@ -48,7 +50,7 @@ const config: HardhatUserConfig = {
     // }
   },
   tronSolc: {
-    enable: true,
+    enable: true, // enable tron solc compiler
   },
   namedAccounts: {
     deployer: {
